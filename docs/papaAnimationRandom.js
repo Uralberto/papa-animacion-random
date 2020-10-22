@@ -23,27 +23,36 @@ function barajar(array) {
   return array;
 }
 
-barajar(paths);
-
-
 
 function apagarPaths() {
 for (let i = 0; i <= paths.length - 1; i++) {
   let randomOpacity = Math.random()
   paths[i].style.opacity = randomOpacity;
-  paths[i].style.transformOrigin= 'scale(1)';
-
 }
 }
 
+
+function colorRandom() {
+  let set = "0123456789ABCDEF";
+  let codigo = [];
+  for (let i = 0; i <= 5; i++) {
+    let num = Math.floor(Math.random() * 16);
+    codigo.push(set[num]);
+  }
+  let codigoColor = "#" + codigo.join("");
+  return codigoColor;
+}
 
 
 function pintar() {
-  barajar(paths);
+  // barajar(paths);
   apagarPaths()
   let i = 0;
   let timer = window.setInterval(function () {
     paths[i].style.opacity = 1;
+    let color = colorRandom()
+    paths[130].style.fill = color;
+    paths[131].style.fill = color;
     if (i === paths.length - 1) {
       clearInterval(timer);
     }
@@ -56,7 +65,7 @@ let ciclo
 
 
 function pintarCiclo() {
-  barajar(paths);
+  // barajar(paths);
   apagarPaths()
   pintar();
 }
@@ -66,10 +75,6 @@ function pintarCiclos() {
   ciclo = setInterval(pintarCiclo, 4000 )
 }
 
-
-// function activarAnimacion(){
-// setTimeout(cicloAnimacion, 0)
-// }
 
 
 function detenerPintarCiclos(){
