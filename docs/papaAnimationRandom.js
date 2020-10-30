@@ -4,10 +4,7 @@
 // const path = document.querySelectorAll("path");
 // const boton = document.getElementById("dadContainer_boton")
 
-
 // console.log(path)
-
-
 
 // let paths = [];
 
@@ -72,15 +69,10 @@
 //   pintar();
 // }
 
-
-
-
 // function pintarCiclos() {
 //   pintarCiclo()
 //   ciclo = setInterval(pintarCiclo, 1730 )
 // }
-
-
 
 // function detenerPintarCiclos(){
 //   clearInterval(ciclo)
